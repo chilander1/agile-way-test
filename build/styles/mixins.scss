@@ -1,0 +1,142 @@
+@mixin height-align($heightVal, $width: auto) {
+  height: $heightVal;
+  line-height: $heightVal;
+  width: $width;
+}
+
+// Sprite for icons
+.ico-shop {
+  position: relative;
+  @include height-align(40px);
+  padding-left: 40px;
+  margin-bottom: 20px;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url('../img/sprite-icons.png');
+    background-repeat: no-repeat;
+  }
+}
+
+$shop-icons: view wishlist share buy cart;
+@mixin ico-sprite($offset) {
+  $offset: $offset - 1;
+  &:before {
+    background-position: 42px*-$offset 50%;
+  }
+}
+
+@for $i from 1 through length($shop-icons) {
+  $icon: nth($shop-icons, $i);
+  .ico-shop-#{$icon} {
+    @include ico-sprite($i);
+  }
+}
+
+// Mixin height
+@mixin height-align($heightVal, $width: auto) {
+  height: $heightVal;
+  line-height: $heightVal;
+  width: $width;
+}
+
+%price {
+  @include height-align($height-price, $height-price);
+  background: $logo-color;
+  color: #fff;
+  font-weight: 600;
+  font-size: em(13);
+}
+
+%absolute-align {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.flick-widget {
+  position: relative;
+  width: 76px;
+  height: 56px;
+  background-image: url('../img/flickr-sprite.png');
+  background-repeat: no-repeat;
+}
+
+$flick-items: flick1 flick2 flick3 flick4 flick5 flick6;
+@mixin flick-sprite($offset) {
+  $offset: $offset - 1;
+  background-position: 84px*-$offset 50%;
+}
+
+@for $i from 1 through length($flick-items) {
+  $icon: nth($flick-items, $i);
+  .flick-sprite-#{$icon} {
+    @include flick-sprite($i);
+  }
+}
+
+.social-item {
+  position: relative;
+  @include height-align(36px, 36px);
+  padding-left: 36px;
+  &:before {
+    content: "";
+    position: absolute;
+    @include height-align(36px, 36px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url('../img/sprite-social.png');
+    background-repeat: no-repeat;
+  }
+
+}
+
+$social-items: fb tw gp lk fl;
+@mixin soc-sprite($offset) {
+  $offset: $offset - 1;
+  &:before {
+    background-position: 44px*-$offset 50%;
+  }
+}
+
+@for $i from 1 through length($social-items) {
+  $icon: nth($social-items, $i);
+  .social-sprite-#{$icon} {
+    @include soc-sprite($i);
+  }
+}
+
+$browser-context: 14;
+
+  @function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+  }
+
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 50em) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
+
+  }
+}

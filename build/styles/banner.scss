@@ -1,0 +1,27 @@
+$banner-text-height: 60px;
+.banners-section {
+  background: $bg-header-color;
+  padding: 25px 0;
+  .banner-item {
+    padding: 0 10px;
+    .banner-text {
+      background: rgba($bg-header-color, 0.9);
+      color: #fff;
+      font-size: em(21);
+      font-family: 'Aller-light', sans-serif;
+      text-transform: uppercase;
+      @extend %absolute-align;
+      @include height-align($banner-text-height);
+      min-width: 180px;
+      max-width: 230px;
+      padding: 0 25px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    @media all and(max-width: 768px){
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+}

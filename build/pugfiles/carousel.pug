@@ -1,0 +1,29 @@
+include ./mixins
+
+section.main-block
+    div(id="myCarousel" class="carousel slide" data-ride="carousel")
+        .container
+            .row
+                div(class="carousel-inner" role="listbox")
+                    div(class="item active")
+                        +carouselItem("img/img-bg1.png", "$145,99", "Pink Shoes <br> 2013 Collection", "Nunc non fermentum nunc. Sed ut ante eget leo tempor consequat sit amet eu orci. Donec dignissim dolor eget..")
+                    div(class="item")
+                        +carouselItem("img/img-bg1.png", "$145,99", "Anna Field", "Nunc non fermentum nunc. Sed ut ante eget leo tempor consequat sit amet eu orci. Donec dignissim dolor eget..")
+                    div(class="item")
+                        +carouselItem("img/img-bg1.png", "$145,99", "Prada", "Nunc non fermentum nunc. Sed ut ante eget leo tempor consequat sit amet eu orci. Donec dignissim dolor eget..")
+                    div(class="item")
+                        +carouselItem("img/img-bg1.png", "$145,99", "Casadei", "Nunc non fermentum nunc. Sed ut ante eget leo tempor consequat sit amet eu orci. Donec dignissim dolor eget..")
+                    div(class="item")
+                        +carouselItem("img/img-bg1.png", "$145,99", "Mellow Yellow", "Nunc non fermentum nunc. Sed ut ante eget leo tempor consequat sit amet eu orci. Donec dignissim dolor eget..")
+
+        .carousel-nav-block
+            .container
+                .row
+                    .col-md-10.col-sm-12.col-lg-offset-1.padd-7
+                        ol(class="carousel-indicators")
+                            +carouseThumb('0', 'li active', 'Pink Shoes', 'Now af $145,99')
+                            +carouseThumb('1', 'li', 'Anna Field', 'Limited Edition')
+                            +carouseThumb('2', 'li', 'Prada', 'Summer is coming')
+                            +carouseThumb('3', 'li', 'Casadei', 'All Colors avaiable')
+                            +carouseThumb('4', 'li', 'Mellow Yellow', 'Free delivery')
+                            li.marker-line

@@ -1,0 +1,27 @@
+include ./mixins
+nav.navbar.navbar-default
+    .nav-menu-block
+        .navbar-header
+            button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+                span(class="sr-only") Toggle navigation
+                span(class="icon-bar")
+                span(class="icon-bar")
+                span(class="icon-bar")
+        div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")
+            ul(class="nav navbar-nav")
+                +menuLink("#", "Home")
+                +menuLink("#", "Products")
+                +menuLink("#", "About")
+                +menuLink("#", "Pages")
+                +menuLink("#", "Blog")
+                +menuLink("#", "Contact")
+            ul(class="nav navbar-nav navbar-right")
+                li
+                    a(href="#")
+                        span.ico-shop.ico-shop-wishlist
+                        span.wishlist-count.counter.text-center 30
+                li.dropdown
+                    a(href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    aria-expanded="false")
+                        span.ico-shop.ico-shop-cart
+                        span.cart-count.counter.text-center 0

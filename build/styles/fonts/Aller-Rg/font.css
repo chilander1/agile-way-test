@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Aller';
+  src: url('Aller.woff') format('woff'),
+       url('Aller.ttf') format('truetype'),
+       url('Aller.svg#Aller') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aller_Rg';
+  src: url('Aller_Rg.eot');
+  src: url('Aller_Rg.woff2') format('woff2'),
+       url('Aller_Rg.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

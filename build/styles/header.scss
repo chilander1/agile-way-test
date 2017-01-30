@@ -1,0 +1,140 @@
+
+body {
+  font-family: 'Aller', sans-serif;
+  h1, h2, h3, h4 {
+    font-family: 'Aller-Light', sans-serif;
+  }
+  * {
+    &:hover {
+      transition: 0.3s;
+    }
+  }
+  @media all and(max-width: 768px) {
+    font-size: 10px;
+  }
+}
+
+.header {
+  @include height-align($header-h);
+  background: $bg-header-color;
+  position: relative;
+  clear: both;
+  .logo {
+    font-size: em(26);
+    letter-spacing: -2px;
+    color: $logo-color;
+    font-family: 'StHeiti', sans-serif;
+    &:hover {
+      color: darken($logo-color, 10%);
+      text-decoration: none;
+    }
+  }
+  .header-link {
+    color: $header-link-color;
+    border-right: 1px solid #383838;
+    padding: 0 20px;
+    font-size: em(11);
+    a {
+      margin: 0 3px;
+      color: $header-link-color;
+      &:hover {
+        text-decoration: none;
+        color: darken($header-link-color, 10%);
+      }
+    }
+    @media all and(max-width: 370px) {
+      display: inline-block;
+      border: none;
+      padding: 0 10px;
+    }
+  }
+  @media all and(max-width: 370px) {
+    height: auto;
+    text-align: center;
+  }
+  .pull-right, .pull-left {
+    @media all and(max-width: 370px) {
+      float: none !important;
+    }
+  }
+}
+
+nav {
+  &.navbar {
+    background: #fff;
+    border: none;
+    margin: 0;
+    .nav-menu-block {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 0 5px;
+      height: 60px;
+      .navbar-collapse {
+        padding-left: 0;
+      }
+      a {
+        color: $bg-header-color;
+        font-size: em(16);
+        font-weight: 500;
+        &:hover {
+          color: $logo-color;
+
+        }
+      }
+      .navbar-nav {
+        margin-top: -4px;
+        li {
+          border-left: 1px solid $cc;
+          a {
+            padding: 0 23px;
+            line-height: 60px;
+          }
+          &:last-child {
+            a {
+              border-right: 1px solid $cc;
+            }
+          }
+          .ico-shop {
+            float: left;
+            padding-left: 30px;
+            &:before {
+              height: 60px;
+            }
+          }
+          .counter {
+            font-size: em(12);
+            min-width: 20px;
+            line-height: 20px;
+            display: inline-block;
+            background: $wish-counter-bg;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 600;
+            &.cart-count {
+              background: $logo-color;
+            }
+          }
+          @media all and(max-width: 768px) {
+            border: none;
+          }
+        }
+        &.navbar-right {
+          li {
+            a {
+              padding: 0 20px;
+            }
+          }
+        }
+      }
+      .navbar-collapse {
+        &.in {
+          overflow: visible;
+        }
+
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,131 @@
+
+.main-block {
+  //background: linear-gradient(#ecebe6, #f2f1ef);
+  background: url("../img/bg.png") repeat-x;
+  .carousel {
+    .carousel-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .item-details-section {
+      padding-top: 70px;
+      .price {
+        @extend %price;
+      }
+      .carousel-icons-block {
+        .ico-shop {
+          background: #fff;
+          margin-right: 2px;
+          float: left;
+          cursor: pointer;
+        }
+      }
+      .carousel-text-block {
+        font-family: 'Aller-light', sans-serif;
+        color: $bg-header-color;
+        h2 {
+          font-size: em(40);
+        }
+        p {
+          font-size: em(20);
+        }
+
+      }
+      @media all and(max-width: 988px) {
+        padding-top: 20px;
+      }
+      .carousel-img {
+        @media all and(max-width: 460px) {
+
+        }
+      }
+
+    }
+    .carousel-nav-block {
+      background: $carousel-indicators-bg;
+      .carousel-indicators {
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        display: flex;
+        margin-top: 5px;
+        .marker-line {
+          background: #000;
+          width: 100%;
+          height: 10px;
+          position: absolute;
+          border: none;
+          border-radius: 0;
+          top: 0;
+          left: 0;
+        }
+        .li {
+          width: auto;
+          height: auto;
+          text-indent: 0;
+          border: none;
+          flex-grow: 1;
+          padding: 30px 0 20px 0;
+          position: relative;
+          color: $carousel-indicators-color;
+          &:before {
+            content: '';
+            height: 6px;
+            background: $logo-color;
+            width: 90%;
+            position: absolute;
+            top: 3px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 99;
+            transform: scale(0);
+            transition: 0.5s;
+            transform-origin: left center;
+          }
+          &.active {
+            color: #fff;
+            background: transparent;
+            &:before {
+              transform: scale(1);
+            }
+          }
+          &:hover {
+            color: #fff;
+            &:before {
+              transform: scale(1);
+              transition: 0.5s;
+            }
+          }
+          &:not(:nth-last-child(2)) {
+            &:after {
+              content: '';
+              height: 6px;
+              width: 2px;
+              background: $carousel-indicators-bg;
+              position: absolute;
+              top: 2.5px;
+              right: 0;
+              z-index: 99;
+            }
+          }
+          h6{
+            font-size: em(18);
+            margin: 0;
+          }
+          span{
+            font-size: em(12);
+          }
+        }
+      }
+    }
+    @media all and(max-width: 988px) {
+      font-size: 10px;
+    }
+    @media all and(max-width: 768px) {
+      font-size: 8px;
+    }
+  }
+}

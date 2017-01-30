@@ -1,0 +1,25 @@
+section.main-section
+    .container
+        .row.shoes-items-row
+            .col-md-10.col-sm-12.col-lg-offset-1.shoes-items-col.padd-0
+                .main-section-heading.shoes-grid-item
+                    h4 New arrivals on FooseShoes
+                    button(type="button" class="btn btn-default pull-right") Show All
+                +shopItem('img/new-arrivals1.png', '$145,99', 'Even&Odd', false, false)
+                +shopItem('img/new-arrivals2.png', '$145,99', 'Even&Odd', true, false)
+                +shopItem('img/new-arrivals3.png', '$145,99', 'Buffalo Decollete', false, false)
+        .row.shoes-items-row
+            .col-md-10.col-sm-12.col-lg-offset-1.shoes-items-col.padd-0
+                .main-section-heading.shoes-grid-item
+                    h4 Best sellers of the month
+                    button(type="button" class="btn btn-default pull-right") Show All
+                +shopItem('img/best-seller1.png', '$145,99', 'Even&Odd', false, false)
+                +shopItem('img/best-seller2.png', '$145,99', 'Even&Odd', false, false)
+                +shopItem('img/best-seller3.png', '$145,99', 'Buffalo Decollete', false, true)
+        .row.shoes-hr
+            .col-md-10.col-sm-12.col-lg-offset-1.shoes-items-col.padd-0
+                    hr
+        .row.shoes-items-row
+            .col-md-10.col-sm-12.col-lg-offset-1.addon-section.padd-0
+                include ./addon
+

@@ -1,0 +1,50 @@
+{
+  "name": "agile-way-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chilander1/agile-way-test.git"
+  },
+  "author": "Andrew",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-install": "*",
+    "gulp-sass": "*",
+    "gulp-watch": "*",
+    "normalize-scss": "^6.0.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "*",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^3.0.0",
+    "gulp-image": "^2.7.0",
+    "gulp-install": "^0.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "gulp-wrapper": "^1.0.0",
+    "jshint": "^2.9.3"
+  },
+  "bugs": {
+    "url": "https://github.com/chilander1/agile-way-test/issues"
+  },
+  "homepage": "https://github.com/chilander1/agile-way-test#readme"
+}

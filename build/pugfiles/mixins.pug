@@ -1,0 +1,48 @@
+mixin menuLink(href, name)
+    li
+        a(href=href)=name
+
+
+mixin carouselItem(img, price, heading, text)
+    .col-md-6.col-sm-6.col-xs-4
+        img(src=img alt="" class="carousel-img")
+    .col-md-6.col-sm-6.col-xs-8.item-details-section
+        .price.text-center=price
+        .carousel-text-block
+            h2!=heading
+            p=text
+        .carousel-icons-block
+            .ico-shop.ico-shop-view
+            .ico-shop.ico-shop-wishlist
+            .ico-shop.ico-shop-share
+            .ico-shop.ico-shop-buy
+
+mixin carouseThumb(slideTo, classes, heading, text)
+    li(data-target="#myCarousel" data-slide-to=slideTo class=classes)
+        h6=heading
+        span=text
+
+
+mixin shopItem(img, price, heading, sale, outStock)
+    - var sale = sale
+    - var outStock = outStock
+    .col-md-4.shoes-grid-item
+        .shoes-item.text-center
+            .shoes-item-img-block
+                img(src=img alt="")
+            .shoes-item-text
+                .price=price
+                .shoes-item-heading=heading
+                .shoes-item-icons
+                    .ico-shop.ico-shop-view
+                    .ico-shop.ico-shop-wishlist
+                    .ico-shop.ico-shop-share
+                    .ico-shop.ico-shop-buy
+            if sale
+                .shoes-item-ban.sale on sale!
+            else
+
+            if outStock
+                .shoes-item-ban.stock out of stock
+            else
+
