@@ -4,6 +4,13 @@
   width: $width;
 }
 
+$browser-context: 14;
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+
 // Sprite for icons
 .ico-shop {
   position: relative;
@@ -115,28 +122,3 @@ $social-items: fb tw gp lk fl;
   }
 }
 
-$browser-context: 14;
-
-  @function em($pixels, $context: $browser-context) {
-    @return #{$pixels/$context}em;
-  }
-
-
-@mixin breakpoint($point) {
-  @if $point == desktop {
-    @media (min-width: 70em) { @content ; }
-  }
-  @else if $point == laptop {
-    @media (min-width: 64em) { @content ; }
-  }
-  @else if $point == tablet {
-    @media (min-width: 50em) { @content ; }
-  }
-  @else if $point == phablet {
-    @media (min-width: 37.5em)  { @content ; }
-  }
-  @else if $point == mobileonly {
-    @media (max-width: 37.5em)  { @content ; }
-
-  }
-}
